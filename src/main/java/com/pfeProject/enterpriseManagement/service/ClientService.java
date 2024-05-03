@@ -1,6 +1,6 @@
 package com.pfeProject.enterpriseManagement.service;
 
-import DTO.ClientDto;
+import com.pfeProject.enterpriseManagement.DTO.ClientDto;
 import com.pfeProject.enterpriseManagement.Model.Client;
 import com.pfeProject.enterpriseManagement.Repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +41,7 @@ public class ClientService {
             existingClient.setNumeroTel(updatedClientData.getNumeroTel());
             existingClient.setEmail(updatedClientData.getEmail());
             existingClient.setAddresse(updatedClientData.getAddresse());
+            existingClient.setRemiseTVA(updatedClientData.getRemiseTVA());
 
 existingClient.setRemiseTVA(updatedClientData.getRemiseTVA());
             clientRepository.save(existingClient);

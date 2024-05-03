@@ -1,6 +1,6 @@
 package com.pfeProject.enterpriseManagement.service;
 
-import DTO.SupplierDto;
+import com.pfeProject.enterpriseManagement.DTO.SupplierDto;
 import com.pfeProject.enterpriseManagement.Model.Supplier;
 import com.pfeProject.enterpriseManagement.Repository.SupplierRepository;
 import org.springframework.beans.factory.annotation.Autowired;

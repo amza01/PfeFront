@@ -1,4 +1,4 @@
-package DTO;
+package com.pfeProject.enterpriseManagement.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

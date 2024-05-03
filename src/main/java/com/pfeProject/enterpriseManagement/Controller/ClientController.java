@@ -1,6 +1,6 @@
 package com.pfeProject.enterpriseManagement.Controller;
 
-import DTO.ClientDto;
+import com.pfeProject.enterpriseManagement.DTO.ClientDto;
 import com.pfeProject.enterpriseManagement.Model.Client;
 import com.pfeProject.enterpriseManagement.Repository.ClientRepository;
 import com.pfeProject.enterpriseManagement.service.ClientService;

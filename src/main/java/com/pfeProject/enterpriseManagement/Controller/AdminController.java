@@ -1,6 +1,6 @@
 package com.pfeProject.enterpriseManagement.Controller;
 
-import DTO.LoginRequest;
+import com.pfeProject.enterpriseManagement.DTO.LoginRequest;
 import com.pfeProject.enterpriseManagement.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
