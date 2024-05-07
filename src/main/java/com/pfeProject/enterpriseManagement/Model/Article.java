@@ -20,4 +20,6 @@ public class Article {
     private String code;
     private String libelle;
     private int quantiteArticle;
+    private double prixUnitaire;
+    private double tva;
 }

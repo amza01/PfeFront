@@ -30,11 +30,16 @@ public class ArticleController {
 
     @PostMapping
     public Article addArticle(@RequestBody Article article) {
+        System.out.println(article);
         return articleService.saveArticle(article);
     }
 
     @DeleteMapping("/{id}")
     public void deleteArticle(@PathVariable Long id) {
         articleService.deleteArticle(id);
+    }
+    @PutMapping("/{id}")
+    public Article updateArticle(@PathVariable Long id, @RequestBody Article updatedArticle) {
+        return articleService.updateArticle(id, updatedArticle);
     }
 }
