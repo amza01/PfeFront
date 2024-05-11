@@ -49,4 +49,5 @@ existingArticle.setTva(updatedArticle.getTva());
         // Enregistrer les modifications dans la base de données et retourner l'article mis à jour
         return articleRepository.save(existingArticle);
     }
+
 }
