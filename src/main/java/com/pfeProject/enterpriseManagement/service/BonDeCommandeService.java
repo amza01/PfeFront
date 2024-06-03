@@ -82,8 +82,6 @@ public class BonDeCommandeService {
         String path = "C:\\Users\\benmo\\Pdf";
         String path1="classpath:BonDeCommandeReportt.jrxml";
         if(employees.isPresent()){
-
-
             BondeCommandePdf bondeCommandePdf= employees.get();
             List<BondeCommandePdf> list = new ArrayList<>();
             list.add(bondeCommandePdf);
@@ -120,15 +118,11 @@ if(bondeCommandePdf.getStatus().equals("reçu")){
 
                 // Mettre à jour la quantité dans la table Article (quantité + nouvelle quantité)
                 article.setQuantiteArticle(article.getQuantiteArticle() + newQuantity);
+                if(article.getQuantiteArticle() + newQuantity>0 && article.getEtat().equals("en rupture de stock"))
+                    article.setEtat("en stock");
                 articleRepository.save(article);
             }
-            Optional<BondeCommandePdf> optionalBonDeCommandePdf =  bonDecommandePdfRepository.findByCode(bonDeCommande.getCode());
-if(optionalBonDeCommandePdf.isPresent())
-{
-    BondeCommandePdf BondeCommandePdf=optionalBonDeCommandePdf.get();
-    BondeCommandePdf.setStatus("reçu");
-    bonDecommandePdfRepository.save(BondeCommandePdf);
-}
+
             return bonDeCommandeRepository.save(bonDeCommande);
         } else {
             throw new RuntimeException("Bon de commande non trouvé avec l'ID: " + bonDeCommandeId);

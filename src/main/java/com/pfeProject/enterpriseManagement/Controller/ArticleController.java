@@ -42,4 +42,8 @@ public class ArticleController {
     public Article updateArticle(@PathVariable Long id, @RequestBody Article updatedArticle) {
         return articleService.updateArticle(id, updatedArticle);
     }
+    @PutMapping("/quantite/{id}")
+    public Article updateArticlequantite(@PathVariable Long id, @RequestBody Integer quantite) {
+        return articleService.updateArticleQuantite(id, quantite);
+    }
 }

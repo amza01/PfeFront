@@ -50,4 +50,14 @@ existingArticle.setTva(updatedArticle.getTva());
         return articleRepository.save(existingArticle);
     }
 
+    public Article updateArticleQuantite(Long id, int quantite) {
+        Article existingArticle = articleRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Article not found with id: " + id));
+        int x=existingArticle.getQuantiteArticle();
+        existingArticle.setQuantiteArticle(quantite+x);
+        String etat=existingArticle.getEtat();
+        if(!etat.equals("en stock") && x+quantite>5)
+            existingArticle.setEtat("en stock");
+        return articleRepository.save(existingArticle);
+    }
 }

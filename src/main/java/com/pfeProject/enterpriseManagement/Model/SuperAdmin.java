@@ -1,6 +1,5 @@
 package com.pfeProject.enterpriseManagement.Model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,18 +8,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Article {
+@NoArgsConstructor
+@Entity
+public class SuperAdmin {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idArticle;
-    private String code;
-    private String libelle;
-    private int quantiteArticle;
-    private double prixUnitaire;
-    private double tva;
-    private String  etat;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String email;
+    private String password;
 }

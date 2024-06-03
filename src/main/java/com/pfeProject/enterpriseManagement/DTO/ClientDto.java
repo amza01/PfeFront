@@ -13,7 +13,7 @@ public class ClientDto {
     private String addresse;
 
     private String numeroTel;
-    private Long remiseTVA;
+    private Long tauxRemise;
 
 
 

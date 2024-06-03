@@ -29,7 +29,7 @@ public class ClientService {
         client.setAddresse(clientJson.getAddresse());
 
         client.setNumeroTel(clientJson.getNumeroTel());
-        client.setRemiseTVA(clientJson.getRemiseTVA());
+        client.setRemiseTVA(clientJson.getTauxRemise());
         return client;
     }
     public ResponseEntity<?> updateClient(Long id, ClientDto updatedClientData) {
@@ -41,9 +41,9 @@ public class ClientService {
             existingClient.setNumeroTel(updatedClientData.getNumeroTel());
             existingClient.setEmail(updatedClientData.getEmail());
             existingClient.setAddresse(updatedClientData.getAddresse());
-            existingClient.setRemiseTVA(updatedClientData.getRemiseTVA());
+            existingClient.setRemiseTVA(updatedClientData.getTauxRemise());
 
-existingClient.setRemiseTVA(updatedClientData.getRemiseTVA());
+existingClient.setRemiseTVA(updatedClientData.getTauxRemise());
             clientRepository.save(existingClient);
 
             return ResponseEntity.ok(existingClient);
